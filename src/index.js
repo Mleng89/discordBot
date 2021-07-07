@@ -6,6 +6,9 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
+/*
+USING ! TO INTERACT WITH BOT W/ RESPONSE
+*/
 client.on('interaction', async (interaction) => {
 	if (!interaction.isCommand()) return;
 	if (interaction.commandName === 'ping') {
@@ -18,8 +21,11 @@ client.on('message', (message) => {
 		message.channel.send('Pong.');
 	}
 });
+/*
+TESTING BOT COMMUNICATION WITH PREFIX VARIABLE
+*/
 client.on('message', (message) => {
-	const prefix = '420?';
+	const prefix = 'helloword?';
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(' ');
@@ -35,6 +41,10 @@ client.on('message', (message) => {
 	}
 });
 
+/*
+ 	SLASH COMMANDS
+	 WORK IN PROGRESS
+*/
 client.api
 	.applications(process.env.CLIENT_ID)
 	.guilds(process.env.SERVER_ID)
