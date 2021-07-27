@@ -10,68 +10,24 @@ client.on('ready', () => {
 /*
 USING ! TO INTERACT WITH BOT W/ RESPONSE
 */
-client.on('interaction', async (interaction) => {
-	if (!interaction.isCommand()) return;
-	/**
-	 * TEST HELLO
-	 */
-	if (interaction.commandName === 'heybuddy') {
-		await interaction.reply(`GFY, don't hey buddy me, ${interaction.author}`);
-	}
-	/**
-	 * FROGGY
-	 */
-	if (interaction.commandName === 'frog') {
-		await interaction.reply(`\`\`\` 
-┼┼┼┼┼┼┼┼┼┼┼┼┼┼███┼┼┼┼┼███
-┼┼┼┼┼┼┼┼┼┼┼┼███████┼███████
-┼┼┼┼┼┼┼┼┼┼┼┼██░░░█████░░░██
-┼┼┼┼┼┼┼┼┼┼┼██░██░░███░██░░██
-┼┼┼┼┼┼┼┼┼┼┼██░██░░███░██░░██
-┼┼┼┼┼┼┼┼┼┼┼██░░░░░███░░░░░██
-┼┼┼┼┼┼┼┼┼┼┼███░░░█████░░░███
-┼┼┼┼┼┼┼┼┼┼███████████████████
-┼┼┼┼┼┼┼┼┼███████░░██░░████████
-┼┼┼┼┼┼┼┼███████████████████████
-┼┼┼┼┼┼┼██████▒▒▒▒▒▒▒▒▒▒▒▒▒██████
-┼┼┼┼┼┼┼██▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒░▒▒██
-┼┼┼┼┼┼┼█▒░▒▒▒░▒▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒█
-┼┼┼┼┼┼██▒▒░░░▒▒░▒▒▒▒▒▒▒▒▒▒░░░▒▒██
-┼┼┼┼┼┼██▒░░█░░▒▒▒▒▒▒▒░▒▒▒░░█░░▒██
-┼┼┼┼┼███▒░░░██░░░░░░░░░░░██░░░▒███
-┼┼┼┼█████▒▒░░░███████████░░░▒▒█████
-┼┼┼┼█████┼▒▒▒░░░░░░░░░░░░░▒▒▒┼█████
-┼┼┼┼┼█████┼▒▒▒▒░░░░░░░░░▒▒▒▒┼█████
-┼┼┼┼┼┼██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
-┼┼┼┼┼█████████┼┼┼┼┼┼┼┼┼┼┼██████████
-┼┼┼┼███┼███┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼███┼████
-┼┼┼┼┼┼┼┼███┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼███ 
- \`\`\``);
-	}
-	/**
-	 * SURPRISED PIKACHU
-	 */
-	if (interaction.commandName === 'pikachu') {
-		await interaction.reply(`\`\`\` 
-⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⢰⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣾⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
-⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
-⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
-⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
- \`\`\``);
-	}
-});
 
 client.on('message', (message) => {
+	/**
+	 * COMMANDS FOR THE BOT
+	 */
+	if (message.content === '!commands') {
+		message.channel.send(
+			`Hey, ${message.author}, these are the commands I can do so far: 
+			\`\`\` 
+			!server
+			!user-info
+			!heybuddy
+			!frog
+			!pikachu
+			\`\`\` 
+			`
+		);
+	}
 	/**
 	 * RESPONSE FOR HELLO
 	 */
@@ -130,6 +86,14 @@ client.on('message', (message) => {
 ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
  \`\`\``);
+	}
+	if (message.content === '!server') {
+		message.channel.send(`Your servername: ${message.guild.name}`);
+	}
+	if (message.content === '!user-info') {
+		message.channel.send(
+			`Your username: ${message.author.username}\nYour ID: ${message.author.id}`
+		);
 	}
 });
 
