@@ -31,6 +31,8 @@ client.on('message', (message) => {
 			!heybuddy
 			!frog
 			!pikachu
+			!members
+			!gfy **This will PM rrrrrr a personalized message**
 			\`\`\` 
 			`
 		);
