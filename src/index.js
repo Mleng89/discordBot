@@ -26,13 +26,13 @@ client.on('message', (message) => {
 		message.channel.send(
 			`Hey, ${message.author}, these are the commands I can do so far: 
 			\`\`\` 
-			!server
-			!user-info
-			!heybuddy
-			!frog
-			!pikachu
-			!members
-			!gfy **This will PM rrrrrr a personalized message**
+!server
+!user-info
+!heybuddy
+!frog
+!pikachu
+!members
+!gfy **This will PM rrrrrr a personalized message**
 			\`\`\` 
 			`
 		);
